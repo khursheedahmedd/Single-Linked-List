@@ -23,9 +23,12 @@ public:
     void printAll();
     void remove(int);
     bool isEmpty();
-    
-    
+    void deleteFirstElement();
+    void deleteLastElement();
+    int searchMiddle();
+    void removeMiddle();
     
 };
 
 #endif /* Linked_List_hpp */
+
