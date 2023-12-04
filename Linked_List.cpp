@@ -78,6 +78,11 @@ bool LinkedList::search(int key) {
 }
 
 void LinkedList::printAll() {
+    if(isEmpty()) {
+        cout<<"\nThe list is empty.";
+        return;
+    }
+    
     Node* temp = head;
     while (temp != nullptr) {
         cout << temp->getData() << " ";
@@ -86,6 +91,11 @@ void LinkedList::printAll() {
 }
 
 void LinkedList::remove(int key) {
+    if(isEmpty()) {
+        cout<<"\nThe list is empty.";
+        return;
+    }
+    
     Node* curr = head;
     Node* prev = nullptr;
     
@@ -116,4 +126,74 @@ void LinkedList::remove(int key) {
     
     cout<<"\nThe node is deleted successfully.";
 }
+
+
+void LinkedList::deleteFirstElement() {
+    
+    if(isEmpty()) {
+        cout<<"\nThe list is empty.";
+        return;
+    }
+    
+    Node* temp = head;
+    head = temp->getNext();
+    
+    delete temp;
+    
+    count--;
+    
+    cout<<"\nThe first node is deleted succussfully.";
+}
+
+void LinkedList::deleteLastElement() {
+    if(isEmpty()) {
+        cout<<"\nThe list is empty.";
+        return;
+    }
+    
+    Node* curr = head;
+    Node* prev = NULL;
+    
+    if(curr->getNext() == NULL) {
+        head = NULL;
+        delete curr;
+        
+        count--;
+        
+        cout<<"\nThe lats node is deleted successfully.";
+        return;
+    }
+    
+    while (curr->getNext() != NULL) {
+        prev = curr;
+        curr = curr->getNext();
+    }
+    
+    prev->setNext(NULL);
+    delete curr;
+    
+    cout<<"\nThe node is deleted successfully.";
+}
+
+int LinkedList::searchMiddle() {
+    if(isEmpty()) {
+        cout<<"\nThe list empty. Returning -1.";
+        return -1;
+    }
+    Node* temp = head;
+    
+    if(count == 2) {
+        return temp->getData();
+    }
+    
+    int c = count/2;
+    
+    while (c !=0) {
+        temp = temp->getNext();
+        c--;
+    }
+    return temp->getData();
+
+}
+
 
