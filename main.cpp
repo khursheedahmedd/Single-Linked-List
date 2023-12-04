@@ -21,7 +21,11 @@ int main() {
         cout<<"\n* 3. Print All        *";
         cout<<"\n* 4. Search           *";
         cout<<"\n* 5. Delete           *";
-        cout<<"\n* 6. Exit             *";
+        cout<<"\n* 6. Delete first     *";
+        cout<<"\n* 7. Delete Last      *";
+        cout<<"\n* 8. Search Middle    *";
+        cout<<"\n* 9. Delete Middle    *";
+        cout<<"\n* 10. Exit             *";
         cout<<"\n***********************";
         cout<<"\nEnter your choice: ";
         cin>>choice;
@@ -67,6 +71,22 @@ int main() {
                 break;
             }
             case 6: {
+                list->deleteFirstElement();
+                break;
+            }
+            case 7: {
+                list->deleteLastElement();
+                break;
+            }
+            case 8: {
+                cout<<"\nThe middle element is: "<<list->searchMiddle();
+                break;
+            }
+            case 9: {
+                list->removeMiddle();
+                break;
+            }
+            case 10: {
                 cout<<"\nExiting....";
                 return 0;
             }
@@ -80,3 +100,4 @@ int main() {
     
     return 0;
 }
+
