@@ -15,18 +15,22 @@ int main() {
     int choice;
     
     do {
-        cout<<"\n***** Linked List *****";
-        cout<<"\n* 1. Insert at Tail   *";
-        cout<<"\n* 2. Insert at Head   *";
-        cout<<"\n* 3. Print All        *";
-        cout<<"\n* 4. Search           *";
-        cout<<"\n* 5. Delete           *";
-        cout<<"\n* 6. Delete first     *";
-        cout<<"\n* 7. Delete Last      *";
-        cout<<"\n* 8. Search Middle    *";
-        cout<<"\n* 9. Delete Middle    *";
-        cout<<"\n* 10. Exit             *";
-        cout<<"\n***********************";
+        cout<<"\n****** Linked List ******";
+        cout<<"\n* 1. Insert at Tail     *";
+        cout<<"\n* 2. Insert at Head     *";
+        cout<<"\n* 3. Print All          *";
+        cout<<"\n* 4. Search             *";
+        cout<<"\n* 5. Delete             *";
+        cout<<"\n* 6. Delete first       *";
+        cout<<"\n* 7. Delete Last        *";
+        cout<<"\n* 8. Search Middle      *";
+        cout<<"\n* 9. Delete Middle      *";
+        cout<<"\n* 10. Print Reverse     *";
+        cout<<"\n* 11. Remove duplicate  *";
+        cout<<"\n* 12. Find even odd     *";
+        cout<<"\n* 13. Merge two lists   *";
+        cout<<"\n* 14. Exit              *";
+        cout<<"\n*************************";
         cout<<"\nEnter your choice: ";
         cin>>choice;
         
@@ -87,6 +91,21 @@ int main() {
                 break;
             }
             case 10: {
+                list->printReverseList();
+                break;
+            }
+            case 11: {
+                list->removeDuplicates();
+                break;
+            }
+            case 12: {
+                list->segregateEvenOdd();
+                break;
+            }
+            case 13: {
+                cout<<"\nThis function is not implemented yet.";
+            }
+            case 14: {
                 cout<<"\nExiting....";
                 return 0;
             }
