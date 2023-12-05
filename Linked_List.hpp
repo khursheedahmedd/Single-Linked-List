@@ -16,7 +16,7 @@ private:
     
 public:
     LinkedList();
-    ~LinkedList();
+//    ~LinkedList();
     void insertAtTail(int);
     void insertAtHead(int);
     bool search(int);
@@ -27,6 +27,12 @@ public:
     void deleteLastElement();
     int searchMiddle();
     void removeMiddle();
+    void printReverse(Node* node);
+    void printReverseList();
+    void removeDuplicates();
+    void segregateEvenOdd();
+    LinkedList mergeLists(LinkedList list1, LinkedList list2);
+    
     
 };
 
